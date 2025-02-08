@@ -1,0 +1,10 @@
+{
+  "futurePrice": null,
+  "hasData": false,
+  "stateAggregation": "monthly_all",
+  "zoneMessage": {
+    "issue": "None",
+    "message": "Temporarily hidden while we are developing the zone"
+  },
+  "zoneStates": {}
+}
