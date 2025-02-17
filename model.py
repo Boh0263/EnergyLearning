@@ -21,7 +21,7 @@ MONGO_URI_LOCAL= f"mongodb://localhost:{MONGO_PORT}/"
 def fetch_data():
     client = MongoClient(MONGO_URI_LOCAL)
     db = client[DB_NAME]
-    collection = db['filtered_collection']
+    collection = db['weightedZoneResultsv3']
 
     data = list(collection.find({}, {
     "_id": 0,
@@ -77,8 +77,8 @@ def fetch_data():
 
 
 def preprocess_data(df): 
-    X = df[['numEntries', 'weightedAvgTotalConsumption',
-            'avgEstimatedPercentage', 'avgRenewableRatio', 'avgFossilFuelRatio']]
+    X = df[['weightedAvgTotalConsumption',
+            'avgRenewableRatio', 'avgFossilFuelRatio']]
 
     y = df[['weightedAvgTotalCo2Consumption']]
 

@@ -49,14 +49,14 @@ def create_graph(documents):
 
 
 def get_connected_components(G):
-    """ Get connected components (subgraphs) from the main graph """
+
     connected_components = list(nx.connected_components(G))  
     subgraphs = [G.subgraph(component) for component in connected_components]  
     return subgraphs
 
 
 def prepare_plot_data(subgraph, component_idx):
-    """ Prepare data for plotting using Plotly for a single subgraph """
+
     positions = nx.get_node_attributes(subgraph, "pos")
 
     edge_x = []
@@ -137,7 +137,7 @@ def display_plot(subgraphs, num_components):
 
 
 def main():
-    """ Main execution function """
+
     db_name = "EnergyLearningLocal"
     collection_name = "ZoneBorders3"
 
